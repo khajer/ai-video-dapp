@@ -9,7 +9,7 @@ import {
   useGetSignatures,
   useGetTokenAccounts,
   useRequestAirdrop,
-  useTransferSol,
+  // useTransferSol,
 } from './account-data-access'
 import { ellipsify } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -18,9 +18,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { AppModal } from '@/components/app-modal'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { UiWalletAccount, useWalletUi, useWalletUiCluster } from '@wallet-ui/react'
+import { useWalletUi, useWalletUiCluster } from '@wallet-ui/react'
 import { address, Address, Lamports, lamportsToSol } from 'gill'
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
+// import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
 
 export function AccountBalance({ address }: { address: Address }) {
   const query = useGetBalance({ address })
@@ -66,14 +66,12 @@ export function AccountBalanceCheck({ address }: { address: Address }) {
 
 export function AccountButtons({ address }: { address: Address }) {
   const { cluster } = useWalletUiCluster()
-  const { account } = useWalletUi()
+  // const { account } = useWalletUi()
   return (
     <div>
       <div className="space-x-2">
         {cluster.urlOrMoniker === 'mainnet' ? null : <ModalAirdrop address={address} />}
-        <ErrorBoundary errorComponent={() => null}>
-          {account ? <ModalSend address={address} account={account} /> : null}
-        </ErrorBoundary>
+
         <ModalReceive address={address} />
       </div>
     </div>
@@ -287,47 +285,47 @@ function ModalAirdrop({ address }: { address: Address }) {
   )
 }
 
-function ModalSend(props: { address: Address; account: UiWalletAccount }) {
-  const mutation = useTransferSol({ address: props.address, account: props.account })
-  const [destination, setDestination] = useState('')
-  const [amount, setAmount] = useState('1')
+// function ModalSend(props: { address: Address; account: UiWalletAccount }) {
+//   const mutation = useTransferSol({ address: props.address, account: props.account })
+//   const [destination, setDestination] = useState('')
+//   const [amount, setAmount] = useState('1')
 
-  if (!props.address || !props.account) {
-    return <div>Wallet not connected</div>
-  }
+//   if (!props.address || !props.account) {
+//     return <div>Wallet not connected</div>
+//   }
 
-  return (
-    <AppModal
-      title="Send"
-      submitDisabled={!destination || !amount || mutation.isPending}
-      submitLabel="Send"
-      submit={() => {
-        mutation.mutateAsync({
-          destination: address(destination),
-          amount: parseFloat(amount),
-        })
-      }}
-    >
-      <Label htmlFor="destination">Destination</Label>
-      <Input
-        disabled={mutation.isPending}
-        id="destination"
-        onChange={(e) => setDestination(e.target.value)}
-        placeholder="Destination"
-        type="text"
-        value={destination}
-      />
-      <Label htmlFor="amount">Amount</Label>
-      <Input
-        disabled={mutation.isPending}
-        id="amount"
-        min="1"
-        onChange={(e) => setAmount(e.target.value)}
-        placeholder="Amount"
-        step="any"
-        type="number"
-        value={amount}
-      />
-    </AppModal>
-  )
-}
+//   return (
+//     <AppModal
+//       title="Send"
+//       submitDisabled={!destination || !amount || mutation.isPending}
+//       submitLabel="Send"
+//       submit={() => {
+//         mutation.mutateAsync({
+//           destination: address(destination),
+//           amount: parseFloat(amount),
+//         })
+//       }}
+//     >
+//       <Label htmlFor="destination">Destination</Label>
+//       <Input
+//         disabled={mutation.isPending}
+//         id="destination"
+//         onChange={(e) => setDestination(e.target.value)}
+//         placeholder="Destination"
+//         type="text"
+//         value={destination}
+//       />
+//       <Label htmlFor="amount">Amount</Label>
+//       <Input
+//         disabled={mutation.isPending}
+//         id="amount"
+//         min="1"
+//         onChange={(e) => setAmount(e.target.value)}
+//         placeholder="Amount"
+//         step="any"
+//         type="number"
+//         value={amount}
+//       />
+//     </AppModal>
+//   )
+// }

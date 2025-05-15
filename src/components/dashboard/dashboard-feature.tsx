@@ -1,34 +1,24 @@
-import { AppHero } from '@/components/app-hero'
-
-const links: { label: string; href: string }[] = [
-  { label: 'Solana Docs', href: 'https://docs.solana.com/' },
-  { label: 'Solana Faucet', href: 'https://faucet.solana.com/' },
-  { label: 'Solana Cookbook', href: 'https://solana.com/developers/cookbook/' },
-  { label: 'Solana Stack Overflow', href: 'https://solana.stackexchange.com/' },
-  { label: 'Solana Developers GitHub', href: 'https://github.com/solana-developers/' },
+'use client'
+import Link from 'next/link'
+const items = [
+  { id: 1, name: 'name 1', image: '1.jpg' },
+  { id: 3, name: 'name 2', image: '2.jpg' },
+  { id: 3, name: 'name 3', image: '3.png' },
+  { id: 4, name: 'name 4', image: '4.png' },
 ]
-
 export function DashboardFeature() {
   return (
     <div>
-      <AppHero title="gm" subtitle="Say hi to your new Solana app." />
-      <div className="max-w-xl mx-auto py-6 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-2">
-          <p>Here are some helpful links to get you started.</p>
-          {links.map((link, index) => (
-            <div key={index}>
-              <a
-                href={link.href}
-                className="hover:text-gray-500 dark:hover:text-gray-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.label}
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
+      <nav className="flex flex-col gap-2">
+        {items.map(({ id, name, image }) => (
+          <li key={id}>
+            <Link className={`hover:text-neutral-500 dark:hover:text-white `} href={name}>
+              {name}
+              {image}
+            </Link>
+          </li>
+        ))}
+      </nav>
     </div>
   )
 }

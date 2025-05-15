@@ -1,24 +1,22 @@
 'use client'
-import Link from 'next/link'
-const items = [
-  { id: 1, name: 'name 1', image: '1.jpg' },
-  { id: 3, name: 'name 2', image: '2.jpg' },
-  { id: 3, name: 'name 3', image: '3.png' },
-  { id: 4, name: 'name 4', image: '4.png' },
-]
+
+import { SideBar } from './side-bar'
+import { UploadFile } from './upload-file'
+
 export function DashboardFeature() {
   return (
-    <div>
-      <nav className="flex flex-col gap-2">
-        {items.map(({ id, name, image }) => (
-          <li key={id}>
-            <Link className={`hover:text-neutral-500 dark:hover:text-white `} href={name}>
-              {name}
-              {image}
-            </Link>
-          </li>
-        ))}
-      </nav>
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <aside className="w-64 bg-gray-900 text-white p-4">
+        <SideBar />
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 bg-gray-100 p-4 overflow-auto bg-gray-800">
+        <div>
+          <UploadFile />
+        </div>
+      </main>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 'use client'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react'
 import { WalletButton } from '@/components/solana/solana-provider'
 
 export function AppHeader() {
-  const pathname = usePathname()
+  // const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
   // function isActive(path: string) {

@@ -1,4 +1,5 @@
 import { SideBar } from '@/components/dashboard/side-bar'
+import { ListExplore } from '@/components/explore/list-explore'
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-4 overflow-auto bg-gray-800">
-        <div>Explore</div>
+        <div>
+          <ListExplore />
+        </div>
       </main>
     </div>
   )

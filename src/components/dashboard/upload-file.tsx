@@ -1,7 +1,7 @@
 'use client'
 // import { useState } from 'react'
 export function UploadFile() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = () => {
     // const [formData, setFormData] = useState({
     //   title: '',
     //   description: '',

@@ -1,8 +1,8 @@
 'use client'
-const items = [
-  { name: 'Explore', icon: 'explore', path: '/explore' },
-  { name: 'Assets', icon: 'assets', path: '/assets' },
-]
+// const items = [
+//   { name: 'Explore', icon: 'explore', path: '/explore' },
+//   { name: 'Assets', icon: 'assets', path: '/assets' },
+// ]
 export function UploadFile() {
   return (
     <div>

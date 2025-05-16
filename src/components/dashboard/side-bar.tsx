@@ -8,7 +8,7 @@ export function SideBar() {
   return (
     <div>
       <nav className="flex flex-col gap-2 list-none">
-        {items.map(({ name, icon, path }) => (
+        {items.map(({ name, path }) => (
           <li key={name}>
             <Link className={`hover:text-neutral-500 dark:hover:text-white `} href={path}>
               {name}

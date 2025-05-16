@@ -3,6 +3,7 @@
 import { SideBar } from '@/components/dashboard/side-bar'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Plus } from 'lucide-react'
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState(0)
@@ -151,10 +152,20 @@ export default function Page() {
 
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-4 overflow-auto bg-gray-800">
-        <div className="" id="head-title">
-          <div className="pb-5 font-bold text-2xl">Estimated Balance</div>
-          <div className="pb-5 font-bold text-4xl">4.472053 SOL</div>
+        <div className="flex justify-between">
+          <div className="" id="head-title">
+            <div className="pb-5 font-bold text-2xl">Estimated Balance</div>
+            <div className="pb-5 font-bold text-4xl">4.472053 SOL</div>
+          </div>
+          <div>
+            <Link href="/assets/add">
+              <button className="w-full bg-black text-white py-3 px-4 rounded hover:bg-gray-600 transition">
+                <Plus />
+              </button>
+            </Link>
+          </div>
         </div>
+
         <div className=" mx-auto ">
           {/* Tab Headers */}
           <div className="flex border-b border-gray-200">

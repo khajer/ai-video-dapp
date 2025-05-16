@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 import { WalletButton } from '@/components/solana/solana-provider'
 import { CircleUser } from 'lucide-react'
+import Image from 'next/image'
 
 export function AppHeader() {
   // const pathname = usePathname()
@@ -19,8 +20,16 @@ export function AppHeader() {
     <header className="relative z-50 px-4 py-2 bg-neutral-100 dark:bg-neutral-900 dark:text-neutral-400">
       <div className="mx-auto flex justify-between items-center">
         <div className="flex items-baseline gap-4">
-          <Link className="text-xl hover:text-neutral-500 dark:hover:text-white" href="/">
-            <span>ShotVDO</span>
+          <Link className="text-xl " href="/">
+            <div className="flex gap-2">
+              <Image
+                src="/assets/icon-32x32.png" // Path to your image file (relative to the public directory or an absolute URL)
+                alt="" // Alt text for accessibility
+                width={32} // Width of the image (required for local images)
+                height={32} // Height of the image (required for local images)
+              />
+              <span className="font-bold">ShotVDO</span>
+            </div>
           </Link>
         </div>
         <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setShowMenu(!showMenu)}>

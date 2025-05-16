@@ -9,18 +9,18 @@ export const metadata: Metadata = {
   description: 'Shot Video',
 }
 
-const links: { label: string; path: string }[] = [
-  // More links...
-  { label: 'Home', path: '/' },
-  { label: 'Account', path: '/account' },
-]
+// const links: { label: string; path: string }[] = [
+//   // More links...
+//   { label: 'Home', path: '/' },
+//   { label: 'Account', path: '/account' },
+// ]
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
         <AppProviders>
-          <AppLayout links={links}>{children}</AppLayout>
+          <AppLayout>{children}</AppLayout>
         </AppProviders>
       </body>
     </html>

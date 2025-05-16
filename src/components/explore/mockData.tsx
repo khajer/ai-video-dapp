@@ -1,0 +1,116 @@
+interface MockData {
+  id: number
+  name: string
+  title: string
+  image: string
+}
+
+const mockData: MockData[] = [
+  { id: 1, name: 'Emma Johnson', title: 'Sunset Over Mountains', image: 'https://picsum.photos/seed/emma1/200/200' },
+  { id: 2, name: 'Liam Smith', title: 'Ocean Waves at Dawn', image: 'https://picsum.photos/seed/liam2/200/200' },
+  {
+    id: 3,
+    name: 'Olivia Brown',
+    title: 'Urban Street Photography',
+    image: 'https://picsum.photos/seed/olivia3/200/200',
+  },
+  { id: 4, name: 'Noah Williams', title: 'Wildlife in the Forest', image: 'https://picsum.photos/seed/noah4/200/200' },
+  { id: 5, name: 'Ava Jones', title: 'Abstract Color Patterns', image: 'https://picsum.photos/seed/ava5/200/200' },
+  {
+    id: 6,
+    name: 'William Garcia',
+    title: 'Vintage Car Collection',
+    image: 'https://picsum.photos/seed/william6/200/200',
+  },
+  { id: 7, name: 'Sophia Miller', title: 'Macro Flower Details', image: 'https://picsum.photos/seed/sophia7/200/200' },
+  { id: 8, name: 'Benjamin Davis', title: 'Night City Skyline', image: 'https://picsum.photos/seed/benjamin8/200/200' },
+  {
+    id: 9,
+    name: 'Isabella Rodriguez',
+    title: 'Desert Sand Dunes',
+    image: 'https://picsum.photos/seed/isabella9/200/200',
+  },
+  {
+    id: 10,
+    name: 'Lucas Martinez',
+    title: 'Winter Mountain Cabin',
+    image: 'https://picsum.photos/seed/lucas10/200/200',
+  },
+  {
+    id: 11,
+    name: 'Mia Hernandez',
+    title: 'Tropical Beach Paradise',
+    image: 'https://picsum.photos/seed/mia11/200/200',
+  },
+  { id: 12, name: 'Henry Lopez', title: 'Architecture Symmetry', image: 'https://picsum.photos/seed/henry12/200/200' },
+  {
+    id: 13,
+    name: 'Charlotte Gonzalez',
+    title: 'Food Photography',
+    image: 'https://picsum.photos/seed/charlotte13/200/200',
+  },
+  {
+    id: 14,
+    name: 'Alexander Wilson',
+    title: 'Foggy Morning Landscape',
+    image: 'https://picsum.photos/seed/alexander14/200/200',
+  },
+  {
+    id: 15,
+    name: 'Amelia Anderson',
+    title: 'Portrait in Golden Light',
+    image: 'https://picsum.photos/seed/amelia15/200/200',
+  },
+  {
+    id: 16,
+    name: 'Michael Thomas',
+    title: 'Underwater Coral Reef',
+    image: 'https://picsum.photos/seed/michael16/200/200',
+  },
+  { id: 17, name: 'Harper Taylor', title: 'Street Art Graffiti', image: 'https://picsum.photos/seed/harper17/200/200' },
+  { id: 18, name: 'Ethan Moore', title: 'Autumn Forest Path', image: 'https://picsum.photos/seed/ethan18/200/200' },
+  {
+    id: 19,
+    name: 'Evelyn Jackson',
+    title: 'Coffee Shop Interior',
+    image: 'https://picsum.photos/seed/evelyn19/200/200',
+  },
+  {
+    id: 20,
+    name: 'Daniel Martin',
+    title: 'Mountain Lake Reflection',
+    image: 'https://picsum.photos/seed/daniel20/200/200',
+  },
+  {
+    id: 21,
+    name: 'Abigail Lee',
+    title: 'Black and White Portrait',
+    image: 'https://picsum.photos/seed/abigail21/200/200',
+  },
+  { id: 22, name: 'Matthew Perez', title: 'Rainy City Streets', image: 'https://picsum.photos/seed/matthew22/200/200' },
+  { id: 23, name: 'Emily Thompson', title: 'Wildlife Safari', image: 'https://picsum.photos/seed/emily23/200/200' },
+  { id: 24, name: 'Samuel White', title: 'Concert Stage Lights', image: 'https://picsum.photos/seed/samuel24/200/200' },
+  {
+    id: 25,
+    name: 'Elizabeth Harris',
+    title: 'Vintage Film Grain',
+    image: 'https://picsum.photos/seed/elizabeth25/200/200',
+  },
+  {
+    id: 26,
+    name: 'David Sanchez',
+    title: 'Minimalist Composition',
+    image: 'https://picsum.photos/seed/david26/200/200',
+  },
+  { id: 27, name: 'Sofia Clark', title: 'Aerial City View', image: 'https://picsum.photos/seed/sofia27/200/200' },
+  { id: 28, name: 'Joseph Ramirez', title: 'Sports Action Shot', image: 'https://picsum.photos/seed/joseph28/200/200' },
+  { id: 29, name: 'Avery Lewis', title: 'Fashion Editorial', image: 'https://picsum.photos/seed/avery29/200/200' },
+  {
+    id: 30,
+    name: 'Scarlett Walker',
+    title: 'Silhouette at Sunset',
+    image: 'https://picsum.photos/seed/scarlett30/200/200',
+  },
+]
+
+export default mockData

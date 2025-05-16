@@ -1,6 +1,9 @@
-import { SideBar } from '@/components/dashboard/side-bar'
+'use client'
 
-export default function Home() {
+import { SideBar } from '@/components/dashboard/side-bar'
+import { View } from '@/components/explore/view'
+
+export default function Page() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
@@ -10,7 +13,9 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-4 overflow-auto bg-gray-800">
-        <div>Explore</div>
+        <div>
+          <View />
+        </div>
       </main>
     </div>
   )

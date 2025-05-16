@@ -4,10 +4,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
-import { ThemeSelect } from '@/components/theme-select'
-import { ClusterButton, WalletButton } from '@/components/solana/solana-provider'
+import { WalletButton } from '@/components/solana/solana-provider'
 
-export function AppHeader({ links = [] }: { links: { label: string; path: string }[] }) {
+export function AppHeader() {
   const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
@@ -22,20 +21,6 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
           <Link className="text-xl hover:text-neutral-500 dark:hover:text-white" href="/">
             <span>ShotVDO</span>
           </Link>
-          <div className="hidden md:flex items-center">
-            <ul className="flex gap-4 flex-nowrap items-center">
-              {links.map(({ label, path }) => (
-                <li key={path}>
-                  <Link
-                    className={`hover:text-neutral-500 dark:hover:text-white ${isActive(path) ? 'text-neutral-500 dark:text-white' : ''}`}
-                    href={path}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setShowMenu(!showMenu)}>
@@ -44,8 +29,6 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
 
         <div className="hidden md:flex items-center gap-4">
           <WalletButton size="sm" />
-          <ClusterButton size="sm" />
-          <ThemeSelect />
         </div>
 
         {showMenu && (
@@ -66,8 +49,6 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
               </ul>
               <div className="flex flex-col gap-4">
                 <WalletButton />
-                <ClusterButton />
-                <ThemeSelect />
               </div>
             </div>
           </div>

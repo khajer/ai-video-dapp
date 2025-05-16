@@ -29,7 +29,7 @@ A decentralized short video platform where users can generate, upload, and mint 
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/ai-video-dapp.git
+git clone https://github.com/khajer/ai-video-dapp.git
 cd ai-video-dapp
 ```
 ### 2. Install dependencies
